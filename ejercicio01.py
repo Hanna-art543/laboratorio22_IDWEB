@@ -1,4 +1,3 @@
-
 import requests
 
 def consultar_httpbin():
@@ -7,7 +6,7 @@ def consultar_httpbin():
     
     if respuesta.status_code == 200:
         datos = respuesta.json() 
-        print("--- Datos de la Petición ---")
+        print("Datos de la Petición")
         print(f"IP (Origin): {datos.get('origin')}")
         print(f"Headers: {datos.get('headers')}")
         print(f"Args: {datos.get('args')}")
