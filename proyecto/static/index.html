@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Equipos - WSGI Avanzado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Gestión de Equipos de Fútbol</h1>
+        <p>Servidor WSGI puro en Python</p>
+
+        <div class="card">
+            <h2>Registrar Nuevo Equipo</h2>
+            <form id="equipo-form">
+                <div class="input-group">
+                    <input type="text" id="nombre" placeholder="Nombre del equipo" required>
+                    <input type="text" id="ciudad" placeholder="Ciudad" required>
+                    <input type="number" id="ataque" placeholder="Ataque (1-10)" min="1" max="10" required>
+                    <input type="number" id="defensa" placeholder="Defensa (1-10)" min="1" max="10" required>
+                </div>
+                <button type="submit">Guardar Equipo</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Consultar Equipo por ID</h2>
+            <div class="input-group" style="display: flex; gap: 10px;">
+                <input type="number" id="busqueda-id" placeholder="ID (ej: 1)">
+                <button id="btn-buscar">Buscar</button>
+            </div>
+            <p id="resultado-busqueda"></p>
+        </div>
+
+        <h2>Equipos Registrados</h2>
+        <table id="tabla-equipos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Ciudad</th>
+                    <th>Nivel Ataque</th>
+                    <th>Nivel Defensa</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+
+        <div style="margin-top: 30px;">
+            <h3>Enlaces API (JSON):</h3>
+            <ul>
+                <li><a href="equipos" target="_blank">Ver todos los equipos (JSON)</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
